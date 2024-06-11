@@ -1,14 +1,15 @@
+<template>
+  <div>
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.description }}</p>
+  </div>
+</template>
+
 <script>
 export default {
-  async asyncData({ params, $http, error }) {
-    const id = params.id
-
-    try {
-      const post = await $http.$get(`https://api.nuxtjs.dev/posts/${id}`)
-      return { post }
-    } catch (e) {
-      error(e)
-    }
+  async asyncData({ params, $http }) {
+    const post = await $http.$get(`https://api.nuxtjs.dev/posts/${params.id}`)
+    return { post }
   }
 }
 </script>
