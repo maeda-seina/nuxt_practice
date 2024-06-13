@@ -7,3 +7,12 @@ export const mutations = {
     state.counter++
   }
 }
+
+export const actions = {
+  async nuxtServerInit() {
+    console.log('nuxtServerInit / server: ' + process.server)
+    const data = await fetch(
+      'https://api.nuxtjs.dev/mountains'
+    )
+  }
+}

@@ -1,7 +1,3 @@
-<template>
-  <h1>About</h1>
-</template>
-
 <script>
 export default {
   data() {
@@ -30,3 +26,10 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div>
+    <h1>SAMPLE</h1>
+    <nuxt-link to="/about">Nuxtリンク</nuxt-link>
+  </div>
+</template>
